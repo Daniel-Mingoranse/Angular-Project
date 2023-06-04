@@ -7,10 +7,11 @@
         <div class="form-floating">
           <input
             type="email"
-            class="form-control"
+            class="form-control"   
             id="floatingInput"
             placeholder="name@example.com"
             name="email"
+            [(ngModel)]="email"
           />
 
           <label for="floatingInput">E-mail:</label>
@@ -23,15 +24,15 @@
             id="floatingPassword"
             placeholder="Password"
             name="password"
+             [(ngModel)]="password"
           />
 
           <label for="floatingPassword">Senha:</label>
         </div>
 
-        <button class="w-100 btn btn-lg btn-primary" type="submit">
+        <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="auth.emailSignin(this.email, this.password)" >
           Entrar
         </button>
-
         <div class="divider d-flex align-items-center mt-4">
           <p class="text-center fw-bold mx-3 mb-0 text-muted">OU</p>
         </div>
@@ -40,9 +41,14 @@
           class="w-100 btn btn-primary btn-lg btn-block btn-google"
           style="background-color: #dd4b39"
           type="submit"
+          (click)="auth.googleSignin()"
         >
           <i class="fab fa-google me-2"></i>Continuar com Gmail
         </button>
+
+        <div *ngIf="auth.error" style="color: red; margin-Top: 20px">
+          {{ auth.error }},Erro Inesperado Tente novamente
+        </div>
       </form>
     </div>
   </div>

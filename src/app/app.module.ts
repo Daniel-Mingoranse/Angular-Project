@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 import { AngularFireModule } from '@angular/fire/compat';
 import { RootComponent } from './root/root.component';
 import { LoginComponent } from './login/login.component';
+import { ListProdutoComponent } from './list-produto/list-produto.component';
+import { AuthService } from './auth.service';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBhN8CaCFElgAIE238E_LCeWtGyLyQxMSU',
@@ -25,7 +27,8 @@ const firebaseConfig = {
     FormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
   ],
-  declarations: [RootComponent, LoginComponent],
+  declarations: [RootComponent, LoginComponent, ListProdutoComponent],
   bootstrap: [RootComponent],
+  providers: [AuthService],
 })
 export class AppModule {}
