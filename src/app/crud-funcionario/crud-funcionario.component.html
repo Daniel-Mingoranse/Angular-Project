@@ -1,0 +1,314 @@
+<main>
+  <div class="container">
+    <div class="content-area">
+      <!-- Listagem de funcionários -->
+      <div
+        class="
+          header
+          d-flex
+          justify-content-between
+          align-items-center
+          position-relative
+        "
+      >
+        <div class="search">
+          <input
+            type="text"
+            class="form-control form-input position-relative"
+            placeholder="Digite o nome do funcionário"
+          />
+          <i class="fa fa-search position-absolute"></i>
+        </div>
+        <button
+          type="button"
+          class="btn btn-create"
+          data-toggle="modal"
+          data-target="#modalCreate"
+        >
+          <i class="fa fa-plus"></i>
+          Adicionar funcionário
+        </button>
+      </div>
+      <div class="table-responsive">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th>Nome</th>
+              <th>E-mail</th>
+              <th>Telefone</th>
+              <th>Endereço</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nome Sobrenome</td>
+              <td>email@gmail.com</td>
+              <td>(13) 99100-0000</td>
+              <td>Av. Presidente Wilson 1540 apto 28</td>
+              <td>
+                <button
+                  class="btn btn-edit mr-3"
+                  data-toggle="modal"
+                  data-target="#modalUpdate"
+                >
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button
+                  class="btn btn-danger"
+                  data-toggle="modal"
+                  data-target="#modalDelete"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Nome Sobrenome</td>
+              <td>email@gmail.com</td>
+              <td>(13) 99100-0000</td>
+              <td>Av. Presidente Wilson 1540 apto 28</td>
+              <td>
+                <button
+                  class="btn btn-edit mr-3"
+                  data-toggle="modal"
+                  data-target="#modalUpdate"
+                >
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button
+                  class="btn btn-danger"
+                  data-toggle="modal"
+                  data-target="#modalDelete"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Nome Sobrenome</td>
+              <td>email@gmail.com</td>
+              <td>(13) 99100-0000</td>
+              <td>Av. Presidente Wilson 1540 apto 28</td>
+              <td>
+                <button
+                  class="btn btn-edit mr-3"
+                  data-toggle="modal"
+                  data-target="#modalUpdate"
+                >
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button
+                  class="btn btn-danger"
+                  data-toggle="modal"
+                  data-target="#modalDelete"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Nome Sobrenome</td>
+              <td>email@gmail.com</td>
+              <td>(13) 99100-0000</td>
+              <td>Av. Presidente Wilson 1540 apto 28</td>
+              <td>
+                <button
+                  class="btn btn-edit mr-3"
+                  data-toggle="modal"
+                  data-target="#modalUpdate"
+                >
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button
+                  class="btn btn-danger"
+                  data-toggle="modal"
+                  data-target="#modalDelete"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Nome Sobrenome</td>
+              <td>email@gmail.com</td>
+              <td>(13) 99100-0000</td>
+              <td>Av. Presidente Wilson 1540 apto 28</td>
+              <td>
+                <button
+                  class="btn btn-edit mr-3"
+                  data-toggle="modal"
+                  data-target="#modalUpdate"
+                >
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button
+                  class="btn btn-danger"
+                  data-toggle="modal"
+                  data-target="#modalDelete"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Nome Sobrenome</td>
+              <td>email@gmail.com</td>
+              <td>(13) 99100-0000</td>
+              <td>Av. Presidente Wilson 1540 apto 28</td>
+              <td>
+                <button
+                  class="btn btn-edit"
+                  data-toggle="modal"
+                  data-target="#modalUpdate"
+                >
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button
+                  class="btn btn-danger"
+                  data-toggle="modal"
+                  data-target="#modalDelete"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Modal criar funcionários -->
+      <div
+        class="modal fade"
+        id="modalCreate"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modalCreateTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalCreateTitle">
+                Adicionar funcionário
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form class="form-create">
+                <div class="form-group">
+                  <label>Nome</label>
+                  <input type="text" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                  <label>E-mail</label>
+                  <input type="email" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                  <label>Telefone</label>
+                  <input type="text" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                  <label>Endereço</label>
+                  <input type="text" class="form-control" required="" />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal editar funcionários -->
+      <div
+        class="modal fade"
+        id="modalUpdate"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modalUpdateTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalUpdateTitle">
+                Editar funcionário
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form class="form-update">
+                <div class="form-group">
+                  <label>Nome</label>
+                  <input type="text" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                  <label>E-mail</label>
+                  <input type="email" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                  <label>Telefone</label>
+                  <input type="text" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                  <label>Endereço</label>
+                  <input type="text" class="form-control" required="" />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Editar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal remover funcionários -->
+      <div
+        class="modal fade"
+        id="modalDelete"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modalDeleteTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalDeleteTitle">
+                Excluir funcionário
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              Você tem certeza que deseja excluir este registro?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">
+                Não, cancelar
+              </button>
+              <button type="button" class="btn btn-danger">Excluir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
