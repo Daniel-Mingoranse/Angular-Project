@@ -6,12 +6,12 @@ import { RouterModule } from '@angular/router';
 import { AngularFireModule } from '@angular/fire/compat';
 import { RootComponent } from './root/root.component';
 import { LoginComponent } from './login/login.component';
-import { ListProdutoComponent } from './list-produto/list-produto.component';
 import { AuthService } from './auth.service';
 import { CrudFuncionarioComponent } from './crud-funcionario/crud-funcionario.component';
 import { AdminComponent } from './admin/admin.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CrudProdutoComponent } from './crud-produto/crud-produto.component';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBhN8CaCFElgAIE238E_LCeWtGyLyQxMSU',
@@ -34,14 +34,14 @@ const firebaseConfig = {
       { path: '', component: RootComponent },
       { path: 'admin', component: AdminComponent },
       { path: 'funcionarios', component: CrudFuncionarioComponent },
-      { path: 'produtos', component: ListProdutoComponent },
+      { path: 'produtos', component: CrudProdutoComponent },
       { path: 'dashboard', component: DashboardComponent },
     ]),
   ],
   declarations: [
     RootComponent,
     LoginComponent,
-    ListProdutoComponent,
+    CrudProdutoComponent,
     CrudFuncionarioComponent,
     AdminComponent,
     SidebarComponent,
