@@ -1,0 +1,11 @@
+.sidebar {
+  min-height: 100vh;
+}
+
+.nav-pills a {
+  padding: 1rem 0.2rem;
+}
+
+.nav-pills i {
+  width: 25px;
+}

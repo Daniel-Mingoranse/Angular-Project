@@ -1,3 +1,16 @@
 * {
   font-family: 'Inter', sans-serif;
 }
+
+app-admin {
+  overflow-x: hidden;
+  background-color: #e4e2f5;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.siderbar {
+  min-height: 100vh;
+}
