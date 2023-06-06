@@ -1,21 +1,20 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import firebase from 'firebase/compat/app';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthService {
   user: any;
   error: any;
 
-  constructor(public auth: AngularFireAuth) {}
+  constructor(public auth: AngularFireAuth, private router: Router) {}
 
   async emailSignin(email: string, password: string) {
     try {
-      const credential = await this.auth.signInWithEmailAndPassword(
-        email,
-        password
-      );
+      const credential = await this.auth.signInWithEmailAndPassword(email, password);
       this.user = credential.user;
+      this.router.navigateByUrl('/funcionario');
     } catch (error) {
       this.error = error;
     }
@@ -26,6 +25,7 @@ export class AuthService {
       const provider = new firebase.auth.GoogleAuthProvider();
       const credential = await this.auth.signInWithPopup(provider);
       this.user = credential.user;
+      this.router.navigateByUrl('/funcionario');
     } catch (error) {
       this.error = error;
     }
