@@ -26,8 +26,10 @@ const firebaseConfig = {
     CommonModule,
     BrowserModule,
     FormsModule,
-    AngularFireModule.initializeApp(firebaseConfig),
-  ],
+    AngularFireModule.initializeApp(firebaseConfig),RouterModule.forRoot([
+      {path: '',component: LoginComponent},
+      {path: 'funcionario',component: CrudFuncionarioComponent},
+    ])],
   declarations: [
     RootComponent,
     LoginComponent,
