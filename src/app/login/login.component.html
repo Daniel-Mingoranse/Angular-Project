@@ -7,7 +7,7 @@
         <div class="form-floating">
           <input
             type="email"
-            class="form-control"   
+            class="form-control"
             id="floatingInput"
             placeholder="name@example.com"
             name="email"
@@ -24,13 +24,17 @@
             id="floatingPassword"
             placeholder="Password"
             name="password"
-             [(ngModel)]="password"
+            [(ngModel)]="password"
           />
 
           <label for="floatingPassword">Senha:</label>
         </div>
 
-        <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="auth.emailSignin(this.email, this.password)" >
+        <button
+          class="w-100 btn btn-lg btn-primary"
+          type="submit"
+          (click)="auth.emailSignin(this.email, this.password)"
+        >
           Entrar
         </button>
         <div class="divider d-flex align-items-center mt-4">
