@@ -13,6 +13,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CrudProdutoComponent } from './crud-produto/crud-produto.component';
 import { FuncionarioService } from './funcionario.service';
+import { FuncionarioDataService } from './funcionario-data.service';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBhN8CaCFElgAIE238E_LCeWtGyLyQxMSU',
@@ -49,6 +50,6 @@ const firebaseConfig = {
     DashboardComponent,
   ],
   bootstrap: [RootComponent],
-  providers: [AuthService, FuncionarioService],
+  providers: [AuthService, FuncionarioService, FuncionarioDataService],
 })
 export class AppModule {}
