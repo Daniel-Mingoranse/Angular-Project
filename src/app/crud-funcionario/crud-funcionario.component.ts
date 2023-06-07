@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Funcionario } from '../funcionario';
+import { FuncionarioDataService } from '../funcionario-data.service';
+import { FuncionarioService } from '../funcionario.service';
 
 @Component({
   selector: 'app-crud-funcionario',
@@ -6,7 +9,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crud-funcionario.component.css'],
 })
 export class CrudFuncionarioComponent implements OnInit {
-  constructor() {}
+  funcionario!: Funcionario;
+  key: string = '';
 
-  ngOnInit() {}
+  constructor(
+    private funcionarioService: FuncionarioService,
+    private funcionarioDataService: FuncionarioDataService
+  ) {}
+
+  ngOnInit() {
+    this.funcionario = new Funcionario();
+  }
+
+  onSubmit() {
+    if (this.key) {
+    } else {
+      this.funcionarioService.insert(this.funcionario);
+    }
+
+    this.funcionario = new Funcionario();
+  }
 }
