@@ -1,0 +1,234 @@
+
+<main>
+  <div class="container">
+    <div class="content-area">
+      <!-- Listagem de produtos -->
+      <div
+        class="
+          header
+          d-flex
+          justify-content-between
+          align-items-center
+          position-relative
+        "
+      >
+        <div class="search">
+          <input
+            type="text"
+            class="form-control form-input position-relative"
+            placeholder="Digite o nome do produto"
+          />
+          <i class="fa fa-search position-absolute"></i>
+        </div>
+        <button
+          type="button"
+          class="btn btn-create"
+          data-toggle="modal"
+          data-target="#modalCreate"
+        >
+          <i class="fa fa-plus"></i>
+          Adicionar Produto
+        </button>
+      </div>
+      <div class="table-responsive">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th>Nome</th>
+              <th>Descrição</th>
+              <th>Valor</th>
+              <th>Quantidade</th>
+              <th>Data de Cadastro</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nome</td>
+              <td>Especificações</td>
+              <td>Valor</td>
+              <td>Quantidade</td>
+              <td>Data</td>
+              <td>
+                <button
+                  class="btn btn-edit mr-3"
+                  data-toggle="modal"
+                  data-target="#modalUpdate"
+                >
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button
+                  class="btn btn-danger"
+                  data-toggle="modal"
+                  data-target="#modalDelete"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Nome</td>
+              <td>Especificações</td>
+              <td>Valor</td>
+              <td>Quantidade</td>
+              <td>Data</td>
+              <td>
+                <button
+                  class="btn btn-edit mr-3"
+                  data-toggle="modal"
+                  data-target="#modalUpdate"
+                >
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button
+                  class="btn btn-danger"
+                  data-toggle="modal"
+                  data-target="#modalDelete"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Modal criar produtos -->
+      <div
+        class="modal fade"
+        id="modalCreate"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modalCreateTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalCreateTitle">
+                Adicionar Produto
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form class="form-create">
+                <div class="form-group">
+                  <label>Nome</label>
+                  <input type="text" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                  <label>Descrição</label>
+                  <input type="email" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                  <label>Valor</label>
+                  <input type="text" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                  <label>Quantidade</label>
+                  <input type="text" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                  <label>Data de Cadastro</label>
+                  <input type="text" class="form-control" required="" />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal editar produtos -->
+      <div
+        class="modal fade"
+        id="modalUpdate"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modalUpdateTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalUpdateTitle">Editar Produto</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form class="form-update">
+                <div class="form-group">
+                  <label>Nome</label>
+                  <input type="text" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                  <label>Descrição</label>
+                  <input type="email" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                  <label>Valor</label>
+                  <input type="text" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                  <label>Quantidade</label>
+                  <input type="text" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                  <label>Data de Cadastro</label>
+                  <input type="text" class="form-control" disabled />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Editar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal remover produtos -->
+      <div
+        class="modal fade"
+        id="modalDelete"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modalDeleteTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalDeleteTitle">Excluir Produto</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              Você tem certeza que deseja excluir este registro?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">
+                Não, cancelar
+              </button>
+              <button type="button" class="btn btn-danger">Excluir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
